@@ -6,8 +6,8 @@ export class UsersController {
     constructor(private readonly appService: UsersService) { }
 
   @Get()
-  async getUsers(): Promise<string> {
-    return await this.appService.getUsers();
+  async getUsers() {
+    return this.appService.getUsers();
   }
   @Get(':id')
   async getUser(@Param() id: string): Promise<string> {
