@@ -10,7 +10,7 @@ export class UsersController {
     return this.appService.getUsers();
   }
   @Get(':id')
-  async getUser(@Param() id: string): Promise<string> {
+  async getUser(@Param() id: string) {
     return await this.appService.getUser(id);
   }
 }
